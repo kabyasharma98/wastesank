@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %} Home{% endblock title %}
+{% block body %}
+
+
+
+<!-- result  -->
+<section>
+    <div class="goalbox" >
+        <h1>Add your data</h1>
+        
+        <br>
+    </div>
+
+    
+    <div class="container">
+        <form name="data" action="/local" method="POST" >
+            <div class="row">
+                <div class="col-50">
+                    <label for="area">Enter Zone Name</label>
+                </div>
+                <div class="col-50">
+                    
+                    <select name="area" id="area">
+                        <option value="BOMMANAHALLI">BOMMANAHALLI</option>
+                        <option value="YALAHANKA">YALAHANKA</option>
+                        <option value="DASARAHALLI">DASARAHALLI</option>
+                        <option value="RR_NAGAR">RR_NAGAR</option>
+                        <option value="EAST">EAST</option>
+                        <option value="Mahadevapura">Mahadevapura</option>
+                        <option value="WEST">WEST</option>
+                        <option value="SOUTH">SOUTH</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-50">
+                    <label for="ward">Ward no.</label>
+                </div>
+                <div class="col-50" style="padding: 0.8em;">
+                    <input type="number" id="ward" name="ward" placeholder="ward number..." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <label for="dcollect">Dry Waste Collected (in Kgs)</label>
+                </div>
+                <div class="col-50" style="padding: 0.8em;">
+                    <input type="number" id="dcollect" name="dcollect" placeholder="drywaste collected..." >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <label for="wcollect">Wet Waste Collected (in Kgs)</label>
+                </div>
+                <div class="col-50" style="padding: 0.8em;">
+                    <input type="number" id="wcollect" name="wcollect" placeholder="wet waste collected..." >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <label for="mcollect">Mixed Waste Collected (in Kgs)</label>
+                </div>
+                <div class="col-50" style="padding: 0.8em;">
+                    <input type="number" id="mcollect" name="mcollect" placeholder="mixed waste collected..." >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <label for="year">Current Year</label>
+                </div>
+                <div class="col-50" style="padding: 0.8em;">
+                    <input type="number" id="year" name="year" placeholder="Current Year..." >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <label for="month">Current Month</label>
+                </div>
+                <div class="col-50" style="padding: 0.8em;">
+                    <select name="month" id="month">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-50">
+                    <label for="pass">Password</label>
+                </div>
+                <div class="col-50" style="padding: 0.8em;">
+                    <input type="password" id="pass" name="pass" placeholder="Enter password provided to bbmp..." required>
+                </div>
+            </div>
+            
+
+
+            <div class="row ">
+                <button type="submit" class="but">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    {% endblock body %}
